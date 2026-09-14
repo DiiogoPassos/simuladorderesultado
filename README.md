@@ -30,7 +30,12 @@
     font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;
     -webkit-font-smoothing:antialiased;
   }
-  body{display:flex;flex-direction:column;height:100dvh;overflow:hidden;}
+  body{
+  display:flex;
+  flex-direction:column;
+  min-height:100dvh;
+  overflow:auto;
+}
   ::selection{background:var(--accent-dim);}
 
   header.topbar{
