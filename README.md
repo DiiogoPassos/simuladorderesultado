@@ -25,16 +25,15 @@
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
   html,body{
-    margin:0;padding:0;height:100%;
+    margin:0;padding:0;
     background:var(--bg);color:var(--text);
     font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;
     -webkit-font-smoothing:antialiased;
   }
-  body{display:flex;flex-direction:column;height:100dvh;overflow:hidden;}
   ::selection{background:var(--accent-dim);}
 
   header.topbar{
-    flex:0 0 auto;
+    position:sticky; top:0; z-index:10;
     padding:calc(10px + var(--safe-top)) 18px 12px;
     background:var(--bg);
     border-bottom:1px solid var(--border);
@@ -43,8 +42,7 @@
   header.topbar p{margin:2px 0 0; font-size:12.5px; color:var(--text-dim);}
 
   main{
-    flex:1 1 auto; overflow-y:auto; -webkit-overflow-scrolling:touch;
-    padding:14px 14px 6px;
+    padding:14px 14px calc(88px + var(--safe-bottom));
   }
   .view{display:none;}
   .view.active{display:block;animation:fade .18s ease;}
@@ -107,7 +105,7 @@
   .hero .divider{width:1px;align-self:stretch;background:var(--border);margin:0 16px;}
 
   nav.tabbar{
-    flex:0 0 auto;
+    position:fixed; left:0; right:0; bottom:0; z-index:10;
     display:flex;
     background:var(--surface);
     border-top:1px solid var(--border);
