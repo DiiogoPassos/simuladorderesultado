@@ -52,8 +52,11 @@
   }
 
   main{
-    flex:1 1 auto; overflow-y:auto; -webkit-overflow-scrolling:touch;
-    padding:14px 14px 6px;
+   flex:1 1 auto;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  padding:14px 14px 100px;
+  min-height:0;
   }
   .view{display:none;}
   .view.active{display:block;animation:fade .18s ease;}
